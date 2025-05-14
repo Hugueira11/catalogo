@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catálogo de Produtos - Mhs Decor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f8f8;
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+        }
+
+        .catalogo {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .produto {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .slider-container {
+            position: relative;
+            width: 100%;
+        }
+
+        .imagem-slider {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .botao-slider {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 8px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .botao-slider:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .anterior {
+            left: 5px;
+        }
+
+        .proximo {
+            right: 5px;
+        }
+
+        .produto h3 {
+            margin: 10px 0;
+        }
+
+        .produto p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .preco {
+            font-size: 18px;
+            color: #27ae60;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .botao {
+            display: inline-block;
+            background: #27ae60;
+            color: white;
+            padding: 10px;
+            margin-top: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .botao:hover {
+            background: #219150;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Mhs Decor</h1>
+    <h2>Catálogo de Produtos</h2>
+
+    <div class="catalogo">
+        <!-- PRODUTOS 1 a 9 -->
+        <!-- Você pode personalizar o conteúdo de cada produto abaixo -->
+
+        <!-- Produto 1 -->
+        <div class="produto">
+            <div class="slider-container">
+                <img class="imagem-slider" id="img-produto1" src="img/produto1/img1-0.jpg" alt="Produto 1">
+                <button class="botao-slider anterior" onclick="trocarImagem(0, -1)">&#10094;</button>
+                <button class="botao-slider proximo" onclick="trocarImagem(0, 1)">&#10095;</button>
+            </div>
+            <h3>Produto 1</h3>
+            <p>
+                Maca 60cm<br>
+                Estrutura toda em Mdf e eucalipto<br>
+                Espumas densidade 28<br>
+                Tecido veludo<br><br>
+                Medida: 1.80cm comprimento, 0.60cm largura, 0.80cm altura<br><br>
+                Cores: preto, rosa chiclete, rose, azul marinho, verde militar, verde ciano, grafite, cinza claro,
+                areia e bege marfim.</p><br>
+
+            <span class="preco">R$ 499,00</span><br>
+            <a href="https://api.whatsapp.com/send?phone=5543991170699&text=Olá! Quero comprar o Produto 1, Maca 60cm."
+                class="botao" target="_blank">Comprar</a>
+        </div>
+
+        <!-- Produto 2 -->
+        <div class="produto">
+            <div class="slider-container">
+                <img class="imagem-slider" id="img-produto2" src="img/produto2/img2-0.jpg" alt="Produto 2">
+                <button class="botao-slider anterior" onclick="trocarImagem(1, -1)">&#10094;</button>
+                <button class="botao-slider proximo" onclick="trocarImagem(1, 1)">&#10095;</button>
+            </div>
+            <h3>Produto 2</h3>
+            <p>
+                Maca 70cm<br>
+                Estrutura toda em Mdf e eucalipto<br>
+                Espumas densidade 28<br>
+                Tecido veludo<br><br>
+                Medida: 1.80cm comprimento, 0.70cm largura, 0.80cm altura<br><br>
+                Cores: preto, rosa chiclete, rose, azul marinho, verde militar, verde ciano, grafite, cinza claro,
+                areia e bege marfim.</p><br>
+
+            <span class="preco">R$ 649,00</span><br>
+            <a href="https://api.whatsapp.com/send?phone=5543991170699&text=Olá! Quero comprar o Produto 2, Maca 70cm."
+                class="botao" target="_blank">Comprar</a>
+        </div>
+
+        <!-- Produto 3 -->
+        <div class="produto">
+            <div class="slider-container">
+                <img class="imagem-slider" id="img-produto3" src="img/produto3/img3-0.jpg" alt="Produto 3">
+                <button class="botao-slider anterior" onclick="trocarImagem(2, -1)">&#10094;</button>
+                <button class="botao-slider proximo" onclick="trocarImagem(2, 1)">&#10095;</button>
+            </div>
+            <h3>Produto 3</h3>
+            <p>
+                Kit 60cm<br>
+                Maca, mocho, escada e almofada<br>
+                Estrutura toda em Mdf e eucalipto<br>
+                Espumas densidade 28<br>
+                Tecido veludo<br><br>
+                Medida: 1.80cm comprimento, 0.60cm largura, 0.80cm altura<br><br>
+                Cores: preto, rosa chiclete, rose, azul marinho, verde militar, verde ciano, grafite, cinza claro,
+                areia e bege marfim.</p><br>
+
+            <span class="preco">R$ 899,00</span><br>
+            <a href="https://api.whatsapp.com/send?phone=5543991170699&text=Olá! Quero comprar o Produto 3,  Kit 60cm Maca, mocho, escada e almofada."
+                class="botao" target="_blank">Comprar</a>
+        </div>
+
+        <!-- Produto 4 -->
+        <div class="produto">
+            <div class="slider-container">
+                <img class="imagem-slider" id="img-produto4" src="img/produto4/img4-0.jpg" alt="Produto 4">
+                <button class="botao-slider anterior" onclick="trocarImagem(3, -1)">&#10094;</button>
+                <button class="botao-slider proximo" onclick="trocarImagem(3, 1)">&#10095;</button>
+            </div>
+            <h3>Produto 4</h3>
+            <p>
+                Kit 70cm<br>
+                Maca, mocho, escada e almofada<br>
+                Estrutura toda em Mdf e eucalipto<br>
+                Espumas densidade 28<br>
+                Tecido veludo<br><br>
+                Medida: 1.80cm comprimento, 0.70cm largura, 0.80cm altura<br><br>
+                Cores: preto, rosa chiclete, rose, azul marinho, verde militar, verde ciano, grafite, cinza claro,
+                areia e bege marfim.</p><br>
+
+            <span class="preco">R$ 1.049,00</span><br>
+            <a href="https://api.whatsapp.com/send?phone=5543991170699&text=Olá! Quero comprar o Produto 4, Kit 70cm Maca, mocho, escada e almofada."
+                class="botao" target="_blank">Comprar</a>
+        </div>
+
+        <!-- Produto 5 -->
+        <div class="produto">
+            <div class="slider-container">
+                <img class="imagem-slider" id="img-produto5" src="img/produto5/img5-0.jpg" alt="Produto 5">
+                <button class="botao-slider anterior" onclick="trocarImagem(4, -1)">&#10094;</button>
+                <button class="botao-slider proximo" onclick="trocarImagem(4, 1)">&#10095;</button>
+            </div>
+            <h3>Produto 5</h3>
+            <p>
+                Kit 60cm + poltrona nina<br>
+                Maca, mocho, escada, almofada e poltrona<br>
+                Estrutura toda em Mdf e eucalipto<br>
+                Espumas densidade 28<br>
+                Tecido veludo<br><br>
+                Medida: 1.80cm comprimento, 0.60cm largura, 0.80cm altura<br><br>
+                Cores: preto, rosa chiclete, rose, azul marinho, verde militar, verde ciano, grafite, cinza claro,
+                areia e bege marfim.</p><br>
+
+            <span class="preco"> R$ 1.089,00</span><br>
+            <a href="https://api.whatsapp.com/send?phone=5543991170699&text=Olá! Quero comprar o Produto 5,  Kit 60cm + poltrona nina."
+                class="botao" target="_blank">Comprar</a>
+        </div>
+
+        <!-- Produto 6 -->
+        <div class="produto">
+            <div class="slider-container">
+                <img class="imagem-slider" id="img-produto6" src="img/produto6/img6-0.jpg" alt="Produto 6">
+                <button class="botao-slider anterior" onclick="trocarImagem(5, -1)">&#10094;</button>
+                <button class="botao-slider proximo" onclick="trocarImagem(5, 1)">&#10095;</button>
+            </div>
+            <h3>Produto 6</h3>
+            <p>
+                Kit 70cm + poltrona nina<br>
+                Maca, mocho, escada, almofada e poltrona<br>
+                Estrutura toda em Mdf e eucalipto<br>
+                Espumas densidade 28<br>
+                Tecido veludo<br><br>
+                Medida: 1.80cm comprimento, 0.70cm largura, 0.80cm altura<br><br>
+                Cores: preto, rosa chiclete, rose, azul marinho, verde militar, verde ciano, grafite, cinza claro,
+                areia e bege marfim.</p><br>
+
+            <span class="preco">R$ 1.239,00</span><br>
+            <a href="https://api.whatsapp.com/send?phone=5543991170699&text=Olá! Quero comprar o Produto 6,  Kit 70cm + poltrona nina."
+                class="botao" target="_blank">Comprar</a>
+        </div>
+
+        <!-- Produto 7 -->
+        <div class="produto">
+            <div class="slider-container">
+                <img class="imagem-slider" id="img-produto7" src="img/produto7/img7-0.jpg" alt="Produto 7">
+                <button class="botao-slider anterior" onclick="trocarImagem(6, -1)">&#10094;</button>
+                <button class="botao-slider proximo" onclick="trocarImagem(6, 1)">&#10095;</button>
+            </div>
+            <h3>Produto 7</h3>
+            <p>
+                Poltrona nina<br>
+                Estrutura em eucalipto<br>
+                Espumas Densidade 20<br>
+                Pés palitos<br><br>
+                Cores: preto, rosa chiclete, rose, azul marinho, verde militar, verde ciano, grafite, cinza claro,
+                areia e bege marfim.</p><br>
+
+            <span class="preco">R$ 190,00</span><br>
+            <a href="https://api.whatsapp.com/send?phone=5543991170699&text=Olá! Quero comprar o Produto 7, Poltrona nina."
+                class="botao" target="_blank">Comprar</a>
+        </div>
+
+        <div class="produto 8">
+            <div class="slider-container">
+                <img class="imagem-slider" id="img-produto8" src="img/produto8/img8-0.jpg" alt="Produto 8">
+                <button class="botao-slider anterior" onclick="trocarImagem(7, -1)">&#10094;</button>
+                <button class="botao-slider proximo" onclick="trocarImagem(7, 1)">&#10095;</button>
+            </div>
+            <h3>Produto 8</h3>
+            <p>
+                Kit 70cm + poltrona pétala<br>
+                Maca, mocho, escada, almofada e poltrona<br>
+                Estrutura toda em Mdf e eucalipto<br>
+                Espumas densidade 28<br>
+                Tecido veludo<br><br>
+                Medida: 1.80cm comprimento, 0.70cm largura, 0.80cm altura<br><br>
+                Cores: preto, rosa chiclete, rose, azul marinho, verde militar, verde ciano, grafite, cinza claro,
+                areia e bege marfim.</p><br>
+
+            <span class="preco">R$ 1.399,00</span><br>
+            <a href="https://api.whatsapp.com/send?phone=5543991170699&text=Olá! Quero comprar o Produto 8, Kit 70cm + poltrona pétala."
+                class="botao" target="_blank">Comprar</a>
+        </div>
+
+        <div class="produto 9">
+            <div class="slider-container">
+                <img class="imagem-slider" id="img-produto9" src="img/produto9/img9-0.jpg" alt="Produto 9">
+                <button class="botao-slider anterior" onclick="trocarImagem(8, -1)">&#10094;</button>
+                <button class="botao-slider proximo" onclick="trocarImagem(8, 1)">&#10095;</button>
+            </div>
+            <h3>Produto 9</h3>
+            <p>
+                Kit 60cm + poltrona pétala<br>
+                Maca, mocho, escada, almofada e poltrona<br>
+                Estrutura toda em Mdf e eucalipto<br>
+                Espumas densidade 28<br>
+                Tecido veludo<br><br>
+                Medida: 1.80cm comprimento, 0.60cm largura, 0.80cm altura<br><br>
+                Cores: preto, rosa chiclete, rose, azul marinho, verde militar, verde ciano, grafite, cinza claro,
+                areia e bege marfim.</p><br>
+
+            <span class="preco">R$ 1.249,00</span><br>
+            <a href="https://api.whatsapp.com/send?phone=5543991170699&text=Olá! Quero comprar o Produto 9, Kit 60cm + poltrona pétala."
+                class="botao" target="_blank">Comprar</a>
+        </div>
+
+        <div class="produto 10">
+            <div class="slider-container">
+                <img class="imagem-slider" id="img-produto10" src="img/produto10/img10-0.jpg" alt="Produto 10">
+                <button class="botao-slider anterior" onclick="trocarImagem(9, -1)">&#10094;</button>
+                <button class="botao-slider proximo" onclick="trocarImagem(9, 1)">&#10095;</button>
+            </div>
+            <h3>Produto 9</h3>
+            <p> 
+                Poltrona pétala<br>
+                Estrutura em eucalipto<br>
+                Espumas Densidade 20<br>
+                Pés palitos<br><br>
+                Cores: preto, rosa chiclete, rose, azul marinho, verde militar, verde ciano, grafite, cinza claro,
+                areia e bege marfim.</p><br>.</p>
+            <span class="preco">R$ 350,00</span><br>
+
+            <a href="https://api.whatsapp.com/send?phone=5543991170699&text=Olá! Quero comprar o Produto 10,  Poltrona pétala."
+                class="botao" target="_blank">Comprar</a>
+        </div>
+
+    </div>
+
+    <script>
+        let imagensProdutos = [
+            ["produto 1/img.1.0.jpg", "produto 1/img1.1.jpg"],
+            ["produtos 2/img.2.0.jpg", "produtos 2/img.2.1.jpg"],
+            ["produtos 3/img.3.0.jpg", "produtos 3/img.3.1.jpg", "produtos 3/img.3.2.jpg"],
+            ["produtos 4/img.4.0.jpg", "produtos 4/img.4.1.jpg", "produtos 4/img.4.2.jpg"],
+            ["produtos 5/img.5.0.jpg", "produtos 5/img.5.1.jpg", "produtos 5/img.5.2.jpg"],
+            ["produtos 6/img.6.0.jpg", "produtos 6/img.6.1.jpg", "produtos 6/img.6.2.jpg"],
+            ["produto 7/img.7.0.jpg", "produto 7/img.7.1.jpg", "produto 7/img.7.2.jpg"],
+            ["produto 8/produto.8.0.jpg"],
+            ["produto 9/produto.9.0.jpg"],
+             ["produto 10/produto.10.0.jpg"],
+        ];
+
+        let indices = Array(imagensProdutos.length).fill(0);
+
+        function trocarImagem(produtoIndex, direcao) {
+            indices[produtoIndex] += direcao;
+            if (indices[produtoIndex] < 0) indices[produtoIndex] = imagensProdutos[produtoIndex].length - 1;
+            if (indices[produtoIndex] >= imagensProdutos[produtoIndex].length) indices[produtoIndex] = 0;
+
+            document.getElementById(`img-produto${produtoIndex + 1}`).src = imagensProdutos[produtoIndex][indices[produtoIndex]];
+        }
+
+        setInterval(() => {
+            for (let i = 0; i < imagensProdutos.length; i++) {
+                trocarImagem(i, 1);
+            }
+        }, 6000);
+    </script>
+
+</body>
+
+</html>
+
